@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeQuestXP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛡️ Welcome to CodeQuestXP 🗡️</h1>
+    <p>You are a young squire learning the sacred art of Python. Choose your first quest:</p>
+    <button onclick="startQuest()">Begin Quest 1: Print Magic</button>
+    <div id="questArea"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
