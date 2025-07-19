@@ -16,6 +16,8 @@ body {
 }
 
 button {
+  display: inline-block;
+  margin: 10px auto;
   background: #4b2e83;
   color: white;
   font-size: 18px;
