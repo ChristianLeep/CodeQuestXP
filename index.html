@@ -6,29 +6,28 @@
   <title>CodeQuestXP</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
-  <div id="loginScreen">
-  <h2>Welcome to CodeQuestXP</h2>
-  <p>Enter your name to begin your quest:</p>
-  <input type="text" id="playerName" placeholder="e.g., Sir Python" />
-  <br><br>
-  <button onclick="startGame()">Enter the Realm</button>
-</div>
-
 <body>
+
   <div id="loginScreen">
-  <h2>Welcome to CodeQuestXP</h2>
-  <p>Enter your name to begin your quest:</p>
-  <input type="text" id="playerName" placeholder="e.g., Sir Python" />
-  <br><br>
-  <button onclick="startGame()">Enter the Realm</button>
-</div>
+    <h2>Welcome to CodeQuestXP</h2>
+    <p>Enter your name to begin your quest:</p>
+    <input type="text" id="playerName" placeholder="e.g., Sir Python" />
+    <br><br>
+    <button onclick="startGame()">Enter the Realm</button>
+  </div>
 
   <div class="container" id="gameScreen" style="display:none;">
-  <div id="xpBar">XP: 0 | Level: 1</div>
-  <h1>🛡️ Welcome to CodeQuestXP 🗡️</h1>
-  <p id="greetingText"></p>
-  <button onclick="startQuest()">Begin Quest 1: Print Magic</button>
+    <div id="xpBar">XP: 0 | Level: 1</div>
+    <h1>🛡️ Welcome to CodeQuestXP 🗡️</h1>
+    <p id="greetingText"></p>
+    <button onclick="startQuest()">Begin Quest 1: Print Magic</button>
+    <div id="questArea"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+egin Quest 1: Print Magic</button>
   <div id="questArea"></div>
 </div>
 
