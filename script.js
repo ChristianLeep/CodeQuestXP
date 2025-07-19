@@ -55,12 +55,26 @@ function startQuest() {
   const quest = document.getElementById("questArea");
   quest.innerHTML = `
     <h2>Quest 1: Print Magic 🔮</h2>
-    <p>Write a line of code that casts your first spell:<br><code>print("Hello, world!")</code></p>
+    <p>Before you can cast spells, you must learn the magic words to speak to your machine.</p>
+    <p>The <code>print()</code> function allows you to display messages to the screen.</p>
+    <p>For example:<br><code>print("Welcome, adventurer!")</code></p>
+    <p>This will show: <strong>Welcome, adventurer!</strong></p>
+    <button onclick="startQuestChallenge()">Continue to Challenge</button>
+  `;
+}
+
+// Loads Quest Challenge 1 into the quest area
+function startQuestChallenge() {
+  const quest = document.getElementById("questArea");
+  quest.innerHTML = `
+    <h2>Quest 1: Cast Your First Spell ✨</h2>
+    <p>Now it's your turn. Use the <code>print()</code> function to say <strong>Hello, world!</strong></p>
     <textarea id="codeInput" rows="4" cols="50">// Type your code here</textarea><br><br>
     <button onclick="checkCode()">Cast Spell</button>
     <div id="result"></div>
   `;
 }
+
 
 // Checks user input code for correctness
 function checkCode() {
