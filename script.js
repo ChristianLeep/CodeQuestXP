@@ -35,16 +35,16 @@ function updateHUD() {
   document.getElementById("xpBar").innerText = `XP: ${xp} | Level: ${level}`;
 }
 
-
 function checkCode() {
   const code = document.getElementById("codeInput").value.trim();
   const result = document.getElementById("result");
 
   if (code === 'print("Hello, world!")' || code === "print('Hello, world!')") {
-  result.innerHTML = "✨ Spell cast successfully! +10 XP!";
-  gainXP(10);
-} else {
-  result.innerHTML = "⚠️ That spell fizzled... Try again!";
+    result.innerHTML = "✨ Spell cast successfully! +10 XP!";
+    gainXP(10);
+  } else {
+    result.innerHTML = "⚠️ That spell fizzled... Try again!";
+  }
 }
 
 window.onload = function() {
@@ -59,5 +59,4 @@ window.onload = function() {
     document.getElementById("gameScreen").style.display = "block";
     updateHUD();
   }
-}
-
+};
