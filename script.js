@@ -58,6 +58,7 @@ function startQuest() {
     <p>Before you can cast spells, you must learn the magic words to speak to your machine.</p>
     <p>The <code>print()</code> function allows you to display messages to the screen.</p>
     <p>For example:<br><code>print("Welcome, adventurer!")</code></p>
+    <p><em>📝 Tip: Don’t forget to wrap your message in quotation marks (" ") — your spell won’t work without them!</em></p>
     <p>This will show: <strong>Welcome, adventurer!</strong></p>
     <button onclick="startQuestChallenge()">Continue to Challenge</button>
   `;
@@ -81,13 +82,25 @@ function checkCode() {
   const code = document.getElementById("codeInput").value.trim();
   const result = document.getElementById("result");
 
+  // ✅ Correct solution
   if (code === 'print("Hello, world!")' || code === "print('Hello, world!')") {
     result.innerHTML = "✨ Spell cast successfully! +10 XP!";
     gainXP(10);
+    return;
+  }
+
+  // ⚠️ Syntax warnings
+  if (!code.startsWith("print")) {
+    result.innerHTML = "⚠️ Your code must start with <code>print</code> to cast the spell!";
+  } else if (!code.includes('"') && !code.includes("'")) {
+    result.innerHTML = "📝 It looks like you're missing quotation marks around your message.";
+  } else if (!code.endsWith(")")) {
+    result.innerHTML = "🧩 Don’t forget to close the parentheses at the end of your spell!";
   } else {
-    result.innerHTML = "⚠️ That spell fizzled... Try again!";
+    result.innerHTML = "⚠️ That spell fizzled... Check your syntax and try again!";
   }
 }
+
 
 // Ends current session without deleting saved data
 function logout() {
