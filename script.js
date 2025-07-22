@@ -68,12 +68,15 @@ function startQuest() {
 function startQuestChallenge() {
   const quest = document.getElementById("questArea");
   quest.innerHTML = `
-    <h2>Quest 1: Cast Your First Spell ✨</h2>
-    <p>Now it's your turn. Use the <code>print()</code> function to say <strong>Hello, world!</strong></p>
-    <textarea id="codeInput" rows="4" cols="50" placeholder='Type your code here...'></textarea>
+  <h2>Quest 1: Cast Your First Spell ✨</h2>
+  <p>Now it's your turn. Use the <code>print()</code> function to say <strong>Hello, world!</strong></p>
+  <div class="quest-input">
+    <textarea id="codeInput" rows="4" cols="50" placeholder="Type your code here..."></textarea>
+    <br>
     <button onclick="checkCode()">Cast Spell</button>
-    <div id="result"></div>
-  `;
+  </div>
+  <div id="result"></div>
+`;
 }
 
 
