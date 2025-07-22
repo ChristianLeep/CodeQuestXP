@@ -36,15 +36,13 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
   font-size: 16px;
-  color: #ffcc00; /* gold/yellow for visibility */
 }
 
-
 .success {
-  color: #00ff99;
+  color: #00ff99; /* green */
 }
 
 .error {
-  color: #ff3333;
+  color: #ff5555; /* red */
 }
 
