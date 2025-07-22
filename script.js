@@ -119,13 +119,6 @@ function logout() {
   }
 }
 
-// Add auto-clear function to text input
-function clearPlaceholder() {
-  const codeInput = document.getElementById("codeInput");
-  if (codeInput.value.trim() === "// Type your code here") {
-    codeInput.value = "";
-  }
-}
 
 
 // Auto-load saved user if data exists
