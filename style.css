@@ -30,3 +30,12 @@ button {
 button:hover {
   background: #6a42b8;
 }
+
+
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffcc00; /* gold/yellow for visibility */
+}
+
