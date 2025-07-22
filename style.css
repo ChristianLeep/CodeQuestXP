@@ -51,4 +51,21 @@ textarea::placeholder {
   font-style: italic;
 }
 
+.quest-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #999;
+}
 
