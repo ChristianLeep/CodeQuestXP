@@ -59,13 +59,28 @@ textarea::placeholder {
   margin: 20px 0;
 }
 
-textarea {
+.quest-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
   width: 100%;
+}
+
+textarea {
+  width: 90%;
   max-width: 500px;
   padding: 10px;
   font-family: monospace;
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #999;
+  box-sizing: border-box;
 }
 
+button {
+  display: block;
+  margin: 0 auto;
+}
