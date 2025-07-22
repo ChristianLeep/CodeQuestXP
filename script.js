@@ -68,12 +68,12 @@ function startQuest() {
 function startQuestChallenge() {
   const quest = document.getElementById("questArea");
   quest.innerHTML = `
-    <h2>Quest 1: Cast Your First Spell ✨</h2>
-    <p>Now it's your turn. Use the <code>print()</code> function to say <strong>Hello, world!</strong></p>
-    <textarea id="codeInput" rows="4" cols="50">// Type your code here</textarea><br><br>
-    <button onclick="checkCode()">Cast Spell</button>
-    <div id="result"></div>
-  `;
+  <h2>Quest 1: Cast Your First Spell ✨</h2>
+  <p>Now it's your turn. Use the <code>print()</code> function to say <strong>Hello, world!</strong></p>
+  <textarea id="codeInput" rows="4" cols="50" onfocus="clearPlaceholder()">// Type your code here</textarea><br><br>
+  <button onclick="checkCode()">Cast Spell</button>
+  <div id="result"></div>
+`;
 }
 
 
@@ -118,6 +118,15 @@ function logout() {
     document.getElementById("loginScreen").style.display = "block";
   }
 }
+
+// Add auto-clear function to text input
+function clearPlaceholder() {
+  const codeInput = document.getElementById("codeInput");
+  if (codeInput.value.trim() === "// Type your code here") {
+    codeInput.value = "";
+  }
+}
+
 
 // Auto-load saved user if data exists
 window.onload = function () {
