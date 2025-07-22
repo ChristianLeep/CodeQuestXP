@@ -82,8 +82,12 @@ function checkCode() {
   const code = document.getElementById("codeInput").value.trim();
   const result = document.getElementById("result");
 
+  // Clear any existing styling
+  result.className = "";
+
   // ✅ Correct solution
   if (code === 'print("Hello, world!")' || code === "print('Hello, world!')") {
+    result.className = "success";
     result.innerHTML = "✨ Spell cast successfully! +10 XP!";
     gainXP(10);
     return;
@@ -91,15 +95,20 @@ function checkCode() {
 
   // ⚠️ Syntax warnings
   if (!code.startsWith("print")) {
+    result.className = "error";
     result.innerHTML = "⚠️ Your code must start with <code>print</code> to cast the spell!";
   } else if (!code.includes('"') && !code.includes("'")) {
+    result.className = "error";
     result.innerHTML = "📝 It looks like you're missing quotation marks around your message.";
   } else if (!code.endsWith(")")) {
+    result.className = "error";
     result.innerHTML = "🧩 Don’t forget to close the parentheses at the end of your spell!";
   } else {
+    result.className = "error";
     result.innerHTML = "⚠️ That spell fizzled... Check your syntax and try again!";
   }
 }
+
 
 
 // Ends current session without deleting saved data
