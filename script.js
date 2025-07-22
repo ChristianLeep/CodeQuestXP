@@ -4,11 +4,14 @@ let player = "";
 
 // Called when user clicks "Enter the Realm"
 function startGame() {
-  const nameInput = document.getElementById("playerName").value.trim();
-  if (!nameInput) {
-    alert("Please enter your name, brave adventurer.");
-    return;
-  }
+  const storedClass = localStorage.getItem("class");
+if (!storedClass) {
+  document.getElementById("characterScreen").style.display = "block";
+} else {
+  loadAvatar(storedClass);
+  document.getElementById("gameScreen").style.display = "block";
+}
+
 
   const savedPlayer = localStorage.getItem("player");
 
@@ -49,6 +52,22 @@ function gainXP(amount) {
 function updateHUD() {
   document.getElementById("xpBar").innerText = `XP: ${xp} | Level: ${level}`;
 }
+
+
+// Character class avatar
+function loadAvatar(characterClass) {
+  const avatarPanel = document.getElementById("avatarPanel");
+  avatarPanel.innerHTML = ""; // Clear previous image
+
+  const baseImage = document.createElement("img");
+  baseImage.src = `images/${characterClass.toLowerCase()}_base.png`; // e.g., knight_base.png
+  baseImage.alt = characterClass;
+  baseImage.style.width = "100%";
+
+  avatarPanel.appendChild(baseImage);
+}
+
+
 
 // Loads Quest 1 into the quest area
 function startQuest() {
@@ -123,6 +142,13 @@ function logout() {
   }
 }
 
+// Select your Class
+function selectClass(chosenClass) {
+  localStorage.setItem("class", chosenClass);
+  loadAvatar(chosenClass);
+  document.getElementById("characterScreen").style.display = "none";
+  document.getElementById("gameScreen").style.display = "block";
+}
 
 
 // Auto-load saved user if data exists
