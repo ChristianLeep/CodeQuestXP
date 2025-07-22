@@ -39,3 +39,12 @@ button:hover {
   color: #ffcc00; /* gold/yellow for visibility */
 }
 
+
+.success {
+  color: #00ff99;
+}
+
+.error {
+  color: #ff3333;
+}
+
